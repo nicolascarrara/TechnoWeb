@@ -1,0 +1,58 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    </head>
+    <body onload="scriptload();">
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+        <header>
+          <h1>Test formulaire</h1>
+        </header>
+        <main>
+          <form action="submit.php" method="POST">
+
+            Votre sexe :
+            <p> Homme <input type="radio" name="sexe" value="h"></p>
+            <p> Femme <input type="radio" name="sexe" value="f"></p>
+            <label for="prenom">Votre Prénom :</label><input type="text" name="prenom" id="prenom" placeholder="Prénom" onblur="checknom('prenom');" required>
+            <label for="nom">Votre Nom : </label><input name="nom" type="text" id="nom" name="nom" placeholder="Nom" onblur="checknom('nom');" required>
+            <label for="mail">Email : </label><input type="email" name="mail" id="email" placeholder="VotreMail@exemple.com" onblur="checkmail()" required>
+            <label for="telephone">Votre numéro de téléphone : </label><input type="tel" id="phone" name="telephone" pattern="^((\+\d{1,3}(-| )?\(?\d\)?(-| )?\d{1,5})|(\(?\d{2,6}\)?))(-| )?(\d{3,4})(-| )?(\d{4})(( x| ext)\d{1,5}){0,1}$">
+            <label for="site">L'adresse de votre site web : </label><input type="url" id="site" name="site" value="http://">
+            <label for="naissance">Votre date de naissance : </label><input type="date" id="d_naiss" name="naissance">
+            Langue maitrisée(s) :
+            Français : <input type="checkbox" name="lang[]" value="fr">
+            Allemand : <input type="checkbox" name="lang[]" value="de">
+            Anglais : <input type="checkbox" name="lang[]" value="en">
+            Italien : <input type="checkbox" name="lang[]" value="it">
+            Espagnol : <input type="checkbox" name="lang[]" value="es">
+            Votre niveau estimé en programmation :
+            <div id="value_lvl"></div>
+            <input type="range" name="lvl" value="10" min="0" max="20" id="lvl" onchange="rangeval()">
+            <input type="submit">
+          </form>
+        </main>
+        <footer>
+
+        </footer>
+        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>
