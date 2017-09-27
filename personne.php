@@ -62,6 +62,6 @@ class Personne
   }
 
   public function sepresenter(){
-    return 'Prenom = '.$this->prenom;
+    return 'Prenom = '.$this->prenom.'</br> Nom = '.$this->nom;
   }
 }?>
